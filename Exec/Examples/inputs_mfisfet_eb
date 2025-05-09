@@ -16,8 +16,8 @@ prob_type = 1
 
 TimeIntegratorOrder = 1
 
-nsteps = 1000
-plot_int = 100
+nsteps = 11
+plot_int = 10
 
 dt = 2.0e-13
 

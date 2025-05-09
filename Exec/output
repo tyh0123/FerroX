@@ -1,0 +1,19 @@
+Initializing AMReX (25.05-12-g2cda035af4e3)...
+MPI initialized with 1 MPI processes
+MPI initialized with thread support level 0
+Initializing CUDA...
+CUDA initialized with 1 device.
+AMReX (25.05-12-g2cda035af4e3) initialized
+
+##### GEOMETRY PROPERTIES #####
+
+##### n_cell: 64  64  18  
+##### prob_lo: -1.6e-08  -1.6e-08  0  
+##### prob_hi: 1.6e-08  1.6e-08  9e-09  
+##### max_grid_size: 64  64  18  
+##### blocking_factor: 8  8  8  
+##### is_periodic: 1  1  0  
+##### coord_sys: 0
+##### embedded_boundary_flag: 0
+##### per  per  dir(0.0)  
+##### per  per  dir(0.0)  

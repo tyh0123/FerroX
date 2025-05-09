@@ -1,0 +1,51 @@
+Host Name: nid001021
+=== If no file names and line numbers are shown below, one can run
+            addr2line -Cpfie my_exefile my_line_address
+    to convert `my_line_address` (e.g., 0x4a6b) into file name and line number.
+    Or one can use amrex/Tools/Backtrace/parse_bt.py.
+
+=== Please note that the line number reported by addr2line may not be accurate.
+    One can use
+            readelf -wl my_exefile | grep my_line_address'
+    to find out the offset for that line.
+
+ 0: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x6ebd5b]
+    _ZN5amrex11BLBackTrace20print_backtrace_infoEP8_IO_FILE
+../../amrex/Src/Base/AMReX_BLBackTrace.cpp:215:36
+
+ 1: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x6f0039]
+    _ZN5amrex11BLBackTrace7handlerEi
+../../amrex/Src/Base/AMReX_BLBackTrace.cpp:103:15
+
+ 2: /lib64/libc.so.6(+0x4ad70) [0x7f4ff4fcfd70]
+
+ 3: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x4b7b70]
+    _ZNKSt12__shared_ptrIN5amrex6Parser4DataELN9__gnu_cxx12_Lock_policyE2EEcvbEv inlined at ../../amrex/Src/Base/Parser/AMReX_Parser.H:126:16 in _ZNK5amrex6Parser11compileHostILi3EEENS_14ParserExecutorIXT_EEEv
+/usr/include/c++/13/bits/shared_ptr_base.h:1670:16
+_ZNK5amrex6Parser11compileHostILi3EEENS_14ParserExecutorIXT_EEEv
+../../amrex/Src/Base/Parser/AMReX_Parser.H:126:16
+
+ 4: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x4e5557]
+    _ZNK5amrex6Parser7compileILi3EEENS_14ParserExecutorIXT_EEEv inlined at ../Source/Solver/Initialization.cpp:637:74 in _Z29Initialize_MaterialPropertiesR8c_FerroXRKN5amrex8GeometryERNS1_8MultiFabES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
+../../amrex/Src/Base/Parser/AMReX_Parser.H:174:30
+_Z29Initialize_MaterialPropertiesR8c_FerroXRKN5amrex8GeometryERNS1_8MultiFabES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
+../Source/Solver/Initialization.cpp:637:74
+
+ 5: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x42e3b6]
+    _Z9main_mainR8c_FerroX
+../Source/main.cpp:203:26
+
+ 6: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x425a55]
+    main
+../Source/main.cpp:39:5
+
+ 7: /lib64/libc.so.6(__libc_start_main+0xef) [0x7f4ff4fba1fd]
+
+ 8: /pscratch/sd/y/ytang4/Ferro_Solver_dev_yt/FerroX/Exec/./main3d.gnu.x86-milan.TPROF.MPI.OMP.ex() [0x428c5a]
+    _start
+../sysdeps/x86_64/start.S:122
+
+
+===== TinyProfilers ======
+main()
+
